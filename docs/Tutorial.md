@@ -9,16 +9,18 @@ This 30 minutes tutorial will expose how to create a new admin app based on an e
 
 ## Setting Up
 
-React-admin uses React. We'll use Facebook's [create-react-app](https://github.com/facebookincubator/create-react-app) to create an empty React app, and install the `react-admin` package:
+React-admin uses React. We'll use Facebook's [create-react-app](https://github.com/facebookincubator/create-react-app) with [react-admin template](https://github.com/zyhou/cra-template-react-admin) to create an empty React-admin app:
 
 ```sh
-yarn create react-app test-admin
+yarn create react-app test-admin --template react-admin
 cd test-admin/
-yarn add react-admin ra-data-json-server prop-types
 yarn start
 ```
 
-You should be up and running with an empty React application on port 3000.
+You should be up and running with a welcome page on port 3000.
+
+![Welcome Page](./img/tutorial_welcome_page.png)
+
 
 ## Using an API As Data Source
 
@@ -60,7 +62,14 @@ JSONPlaceholder provides endpoints for users, posts, and comments. The admin we'
 
 ## Making Contact With The API Using a Data Provider
 
-Bootstrap the admin app by replacing the `src/App.js` by the following code:
+Bootstrap the provider by installing the `ra-data-json-server` package:
+
+``` sh
+yarn add ra-data-json-server
+yarn start
+```
+
+Replacing the `src/App.js` by the following code:
 
 ```jsx
 // in src/App.js
